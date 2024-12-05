@@ -1,0 +1,326 @@
+body {
+  background: $body-background-color;
+  color: $foreground-color;
+  font-family: 'DINP-R', arial, serif;
+  font-size: 1.3em;
+}
+
+header {
+  font-family: 'Jura', arial, serif;
+  font-size: .7em;
+  color: $caption-color;
+  text-align: center;
+  background: $black;
+  padding: 60px 30px 40px;
+  background-size: cover;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 5px;
+
+  .location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: .2;
+
+    h2 {
+      font-weight: normal;
+    }
+  }
+
+  h1 {
+    background-color: $primary-color;
+    color: $black;
+    font-weight: 700;
+    border-bottom-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    padding: .5rem 2rem;
+  }
+
+  h2 {
+    font-weight: bold;
+  }
+}
+
+.line {
+  height: 1px;
+  background-color: $primary-color;
+  margin: 0 10px;
+  width: 100%;
+}
+
+main {
+  background: $black;
+  color: $white;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 5px;
+  width: 100%;
+  line-height: 45px;
+
+  p {
+    text-indent: 100px;
+  }
+
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: 'Goldman', arial, serif;
+    font-weight: 100;
+    font-size: 1.5em;
+    color: $primary-color;
+    text-align: center;
+    padding: 0;
+    margin: 4rem 0;
+  }
+
+  h3 {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+  }
+
+  img {
+    border-radius: 5px;
+  }
+
+  span {
+    color: $primary-color;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: left;
+
+    p {
+      width: 38%;
+      text-indent: 0;
+      font-family: 'Jura', arial, serif;
+    }
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 5rem;
+
+    .background,
+    .background img,
+    .overlay {
+      border-radius: 2rem;
+    }
+  
+    .background {
+      background-color: $primary-color;
+  
+      img {
+        height: 100%;
+        width: 100%;
+      }
+  
+      .overlay {
+        opacity: .8;
+      }
+    }
+  
+    .image-description {
+      font-size: 1rem;
+      font-family: 'Jura', arial, serif;
+      color: $white;
+      padding: 1rem 0;
+    }
+  }
+
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    p {
+      font-family: 'Jura', arial, serif;
+      text-indent: 100px;
+    }
+
+    .frontend, 
+    .backend, 
+    .devops {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      justify-content: flex-start;
+
+      h3 {
+        color: $primary-color;
+        padding-right: 2rem;
+      }
+
+      p {
+        text-indent: 0;
+      }
+    }
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+
+    p {
+      font-family: 'Jura', arial, serif;
+      text-indent: 100px;
+    }
+  }
+}
+
+a {
+  color:  $accent-color;
+
+  &:hover {
+    color: $link-color;
+  }
+}
+
+ul {
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+ul ul,
+ol ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-left: 15px;
+}
+
+ol ol,
+ul ol {
+  list-style-type: lower-latin;
+  list-style-position: inside;
+  margin-left: 15px;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 20px;
+
+  a:hover {
+    color: $white;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header,
+  main {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  main {
+    h1 {
+      font-size: .7em;
+    }
+
+    h2 {
+      font-size: .8em;
+      margin: 0;
+      margin-bottom: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    h3 {
+      font-size: .8em;
+    }
+
+    a, 
+    p {
+      font-size: .7em;
+      text-indent: 30px;
+    }
+
+    .about-container {
+      flex-direction: column;
+      justify-content: normal;
+      align-items: flex-start;
+      text-align: left;
+  
+      p {
+        width: 100%;
+        text-indent: 30px;
+        font-family: 'Jura', arial, serif;
+      }
+    }
+
+    .image-container {
+      margin-top: 1.5rem;
+    }
+
+    .experience-container {
+      p  {
+        text-indent: 30px;
+      }
+
+      h3 {
+        padding: 1.5rem;
+      }
+    }
+
+    .contact-container {
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  header {
+    flex-direction: column;
+    height: 1rem;
+    justify-content: normal;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 4rem;
+    margin-bottom: 5rem;
+
+    .location {
+      width: 80%;
+    }
+  }
+
+  footer {
+    address {
+      font-size: .6em;
+    }
+  }
+}
+

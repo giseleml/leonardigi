@@ -1,0 +1,37 @@
+/**
+ * Fonts
+*/
+
+@font-face {
+  font-family: 'DINP-R';
+  src: url("../fonts/DINPro-Regular.eot?") format("eot"),
+  url("../fonts/DINPro-Regular.woff") format("woff"),
+  url("../fonts/DINPro-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jura';
+  src: url("../fonts/Jura-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jura';
+  src: url("../fonts/Jura-Bold.ttf") format("truetype");
+  font-style: bold;
+  font-weight: 700; 
+}
+
+@font-face {
+  font-family: 'Goldman';
+  src: url("../fonts/Goldman-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Goldman';
+  src: url("../fonts/Goldman-Bold.ttf") format("truetype");
+  font-style: bold;
+  font-weight: 700; 
+}
