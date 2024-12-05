@@ -6,34 +6,68 @@ body {
 }
 
 header {
-  font-size: 2em;
+  font-family: 'Jura', arial, serif;
+  font-size: .7em;
   color: $caption-color;
   text-align: center;
-  background: $foreground-color url('../images/design/heading.png') center 20px no-repeat;
-  padding: 60px 30px 30px;
-  background-size: 160px;
-  width: 90%;
+  background: $black;
+  padding: 60px 30px 40px;
+  background-size: cover;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
   margin: 20px auto;
-  position: relative;
   border-radius: 5px;
 
-  small {
-    font-size: .5em;
+  .location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: .2;
 
-    img {
-      display: inline;
-      width: 20px;
+    h2 {
+      font-weight: normal;
     }
+  }
+
+  h1 {
+    background-color: $primary-color;
+    color: $black;
+    font-weight: 700;
+    border-bottom-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    padding: .5rem 2rem;
+  }
+
+  h2 {
+    font-weight: bold;
   }
 }
 
+.line {
+  height: 1px;
+  background-color: $primary-color;
+  margin: 0 10px;
+  width: 100%;
+}
+
 main {
-  background: $foreground-color;
-  color: $black;
+  background: $black;
+  color: $white;
   margin: 20px auto;
-  padding: 40px;
-  width: 90%;
+  padding: 30px;
   border-radius: 5px;
+  width: 100%;
+  line-height: 45px;
+
+  p {
+    text-indent: 100px;
+  }
 
   h1 {
     font-size: 2em;
@@ -43,10 +77,13 @@ main {
   }
 
   h2 {
-    font-weight: bold;
+    font-family: 'Goldman', arial, serif;
+    font-weight: 100;
     font-size: 1.5em;
+    color: $primary-color;
     text-align: center;
-    padding: 20px;
+    padding: 0;
+    margin: 4rem 0;
   }
 
   h3 {
@@ -59,55 +96,114 @@ main {
     border-radius: 5px;
   }
 
-  video {
-    margin: 0 auto;
-    display: block;
-    width: 100%;
-    height: max-content;
-    border-radius: 5px;
-  }
-}
-
-.badges {
-  line-height: .5em;
-
-  img {
-    display: inline;
+  span {
+    color: $primary-color;
   }
 
-  h6 {
-    font-size: .5em;
+  .about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: left;
+
+    p {
+      width: 38%;
+      text-indent: 0;
+      font-family: 'Jura', arial, serif;
+    }
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 5rem;
+
+    .background,
+    .background img,
+    .overlay {
+      border-radius: 2rem;
+    }
+
+    .background {
+      background-color: $primary-color;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .overlay {
+        opacity: .8;
+      }
+    }
+
+    .image-description {
+      font-size: 1rem;
+      font-family: 'Jura', arial, serif;
+      color: $white;
+      padding: 1rem 0;
+    }
+  }
+
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    p {
+      font-family: 'Jura', arial, serif;
+      text-indent: 100px;
+    }
+
+    .frontend,
+    .backend,
+    .devops {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      justify-content: flex-start;
+
+      h3 {
+        color: $primary-color;
+        padding-right: 2rem;
+      }
+
+      p {
+        text-indent: 0;
+      }
+    }
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+
+    p {
+      font-family: 'Jura', arial, serif;
+      text-indent: 100px;
+    }
   }
 }
 
 a {
-  color: $link-color;
+  color:  $accent-color;
 
   &:hover {
-    color: $black;
+    color: $link-color;
   }
-}
-
-address {
-  color: $accent-color;
-}
-
-pre {
-  margin: 10px;
-  padding: 20px;
-
-  code {
-    display: block;
-    background: $body-background-color;
-    color: $white;
-    padding: 10px;
-    border-left: 6px solid $link-color;
-  }
-}
-
-.logo {
-  margin: 0 auto;
-  display: block;
 }
 
 ul {
@@ -134,23 +230,6 @@ ul ol {
   margin-left: 15px;
 }
 
-blockquote {
-  background: $light-gray;
-  border-left: 4px solid $link-color;
-  border-radius: 5px;
-  margin: 10px 0;
-  padding: 10px 10px 10px 20px;
-}
-
-code {
-  font-family: Consolas, 'courier new';
-  color: $link-color;
-  background-color: $light-gray;
-  padding: 2px;
-  font-size: 1em;
-  border-radius: 5px;
-}
-
 footer {
   text-align: center;
   padding-bottom: 20px;
@@ -160,67 +239,88 @@ footer {
   }
 }
 
-.github-corner:hover {
-  .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
-  }
-}
-
-@keyframes octocat-wave {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  20% {
-    transform: rotate(-25deg);
-  }
-
-  40% {
-    transform: rotate(10deg);
-  }
-
-  60% {
-    transform: rotate(-25deg);
-  }
-
-  80% {
-    transform: rotate(10deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@media (max-width: 500px) {
-  .github-corner {
-    &:hover {
-      .octo-arm {
-        animation: none;
-      }
-    }
-
-    .octo-arm {
-      animation: octocat-wave 560ms ease-in-out;
-    }
-  }
-}
-
 @media only screen and (min-width: 1024px) {
   header,
   main {
-    width: 60%;
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 1023px) {
   main {
     h1 {
-      font-size: 1.3em;
+      font-size: .7em;
     }
 
     h2 {
-      font-size: 1.1em;
+      font-size: .8em;
+      margin: 0;
+      margin-bottom: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    h3 {
+      font-size: .8em;
+    }
+
+    a,
+    p {
+      font-size: .7em;
+      text-indent: 30px;
+    }
+
+    .about-container {
+      flex-direction: column;
+      justify-content: normal;
+      align-items: flex-start;
+      text-align: left;
+
+      p {
+        width: 100%;
+        text-indent: 30px;
+        font-family: 'Jura', arial, serif;
+      }
+    }
+
+    .image-container {
+      margin-top: 1.5rem;
+    }
+
+    .experience-container {
+      p  {
+        text-indent: 30px;
+      }
+
+      h3 {
+        padding: 1.5rem;
+      }
+    }
+
+    .contact-container {
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  header {
+    flex-direction: column;
+    height: 1rem;
+    justify-content: normal;
+    align-items: center;
+    // sass-lint:disable no-misspelled-properties
+    gap: 2rem;
+    padding-bottom: 4rem;
+    margin-bottom: 5rem;
+
+    .location {
+      width: 80%;
+    }
+  }
+
+  footer {
+    address {
+      font-size: .6em;
     }
   }
 }
