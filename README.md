@@ -1,15 +1,15 @@
 # Personal Website
 
-Made with boilerplate (https://github.com/WeAreAthlon/frontend-webpack-boilerplate)
+Made with <a href="https://github.com/WeAreAthlon/frontend-webpack-boilerplate">Webpack FrontEnd Boilerplate</a> using Node v22.
 
-## Running locally
-
-```
-npm run dev
-```
-
-## Build project
+## Run locally:
 
 ```
-npm run production
+$ npm run dev
+```
+
+## Build project:
+
+```
+$ npm run production
 ```
