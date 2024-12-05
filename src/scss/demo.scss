@@ -125,20 +125,20 @@ main {
     .overlay {
       border-radius: 2rem;
     }
-  
+
     .background {
       background-color: $primary-color;
-  
+
       img {
         height: 100%;
         width: 100%;
       }
-  
+
       .overlay {
         opacity: .8;
       }
     }
-  
+
     .image-description {
       font-size: 1rem;
       font-family: 'Jura', arial, serif;
@@ -161,8 +161,8 @@ main {
       text-indent: 100px;
     }
 
-    .frontend, 
-    .backend, 
+    .frontend,
+    .backend,
     .devops {
       display: flex;
       flex-direction: row;
@@ -263,7 +263,7 @@ footer {
       font-size: .8em;
     }
 
-    a, 
+    a,
     p {
       font-size: .7em;
       text-indent: 30px;
@@ -274,7 +274,7 @@ footer {
       justify-content: normal;
       align-items: flex-start;
       text-align: left;
-  
+
       p {
         width: 100%;
         text-indent: 30px;
@@ -308,6 +308,7 @@ footer {
     height: 1rem;
     justify-content: normal;
     align-items: center;
+    // sass-lint:disable no-misspelled-properties
     gap: 2rem;
     padding-bottom: 4rem;
     margin-bottom: 5rem;
@@ -323,4 +324,3 @@ footer {
     }
   }
 }
-
